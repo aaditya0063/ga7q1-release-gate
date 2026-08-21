@@ -25,7 +25,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: TDS identity: 22f2000674@ds.study.iitm.ac.in
+      - name: "TDS identity: 22f2000674@ds.study.iitm.ac.in"
         run: echo "22f2000674@ds.study.iitm.ac.in"
 
       - name: Run tests
