@@ -1,4 +1,4 @@
-name: TDS GA7q1 Release Gate
+name: TDS GA7 Release Gate
 
 on:
   push:
