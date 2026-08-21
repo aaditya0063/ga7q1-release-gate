@@ -1,0 +1,32 @@
+name: TDS GA7q1 Release Gate
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: TDS identity: 22f2000674@ds.study.iitm.ac.in
+        run: echo "22f2000674@ds.study.iitm.ac.in"
+
+      - name: Run tests
+        run: pytest
